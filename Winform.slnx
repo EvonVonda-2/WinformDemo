@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Hmi.Core/Hmi.Core.csproj" />
+  <Project Path="Hmi.Infrastructure/Hmi.Infrastructure.csproj" />
+  <Project Path="Winform/Winform.csproj" />
+</Solution>
