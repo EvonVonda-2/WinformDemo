@@ -1,4 +1,4 @@
-﻿namespace Winform
+namespace Winform
 {
     partial class Form1
     {
@@ -28,13 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnAddDevice = new System.Windows.Forms.Button();
+            this.btnLoadDevices = new System.Windows.Forms.Button();
+            this.dgvDevices = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDevices)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnAddDevice
+            // 
+            this.btnAddDevice.Location = new System.Drawing.Point(165, 105);
+            this.btnAddDevice.Name = "btnAddDevice";
+            this.btnAddDevice.Size = new System.Drawing.Size(101, 50);
+            this.btnAddDevice.TabIndex = 0;
+            this.btnAddDevice.Text = "插入设备";
+            this.btnAddDevice.UseVisualStyleBackColor = true;
+            this.btnAddDevice.Click += new System.EventHandler(this.BtnAddDevice_Click);
+            // 
+            // btnLoadDevices
+            // 
+            this.btnLoadDevices.Location = new System.Drawing.Point(434, 105);
+            this.btnLoadDevices.Name = "btnLoadDevices";
+            this.btnLoadDevices.Size = new System.Drawing.Size(141, 50);
+            this.btnLoadDevices.TabIndex = 1;
+            this.btnLoadDevices.Text = "加载设备列表";
+            this.btnLoadDevices.UseVisualStyleBackColor = true;
+            this.btnLoadDevices.Click += new System.EventHandler(this.BtnLoadDevices_Click);
+            // 
+            // dgvDevices
+            // 
+            this.dgvDevices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDevices.Location = new System.Drawing.Point(26, 161);
+            this.dgvDevices.Name = "dgvDevices";
+            this.dgvDevices.RowHeadersWidth = 62;
+            this.dgvDevices.RowTemplate.Height = 30;
+            this.dgvDevices.Size = new System.Drawing.Size(746, 277);
+            this.dgvDevices.TabIndex = 2;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvDevices);
+            this.Controls.Add(this.btnLoadDevices);
+            this.Controls.Add(this.btnAddDevice);
+            this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDevices)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnAddDevice;
+        private System.Windows.Forms.Button btnLoadDevices;
+        private System.Windows.Forms.DataGridView dgvDevices;
     }
 }
 

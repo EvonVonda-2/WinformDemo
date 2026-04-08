@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="Hmi.Core/Hmi.Core.csproj" />
-  <Project Path="Hmi.Infrastructure/Hmi.Infrastructure.csproj" />
-  <Project Path="Winform/Winform.csproj" />
+  <Project Path="Hmi.Core/Hmi.Core.csproj" Id="1474c6ed-3280-472c-b30b-a708927fb6f2" />
+  <Project Path="Hmi.Infrastructure/Hmi.Infrastructure.csproj" Id="360a7ceb-f848-44bc-adf5-699329cef629" />
+  <Project Path="Winform/Winform.csproj" Id="8c92ea90-4bba-4364-ad31-4d73ec4f2acb" />
 </Solution>
