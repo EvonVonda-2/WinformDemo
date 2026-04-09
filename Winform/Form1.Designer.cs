@@ -31,12 +31,14 @@ namespace Winform
             this.btnAddDevice = new System.Windows.Forms.Button();
             this.btnLoadDevices = new System.Windows.Forms.Button();
             this.dgvDevices = new System.Windows.Forms.DataGridView();
+            this.btnStartPoll = new System.Windows.Forms.Button();
+            this.btnStopPoll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevices)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddDevice
             // 
-            this.btnAddDevice.Location = new System.Drawing.Point(165, 105);
+            this.btnAddDevice.Location = new System.Drawing.Point(48, 95);
             this.btnAddDevice.Name = "btnAddDevice";
             this.btnAddDevice.Size = new System.Drawing.Size(101, 50);
             this.btnAddDevice.TabIndex = 0;
@@ -46,7 +48,7 @@ namespace Winform
             // 
             // btnLoadDevices
             // 
-            this.btnLoadDevices.Location = new System.Drawing.Point(434, 105);
+            this.btnLoadDevices.Location = new System.Drawing.Point(168, 95);
             this.btnLoadDevices.Name = "btnLoadDevices";
             this.btnLoadDevices.Size = new System.Drawing.Size(141, 50);
             this.btnLoadDevices.TabIndex = 1;
@@ -64,11 +66,32 @@ namespace Winform
             this.dgvDevices.Size = new System.Drawing.Size(746, 277);
             this.dgvDevices.TabIndex = 2;
             // 
+            // btnStartPoll
+            // 
+            this.btnStartPoll.Location = new System.Drawing.Point(391, 95);
+            this.btnStartPoll.Name = "btnStartPoll";
+            this.btnStartPoll.Size = new System.Drawing.Size(101, 50);
+            this.btnStartPoll.TabIndex = 3;
+            this.btnStartPoll.Text = "开始采集";
+            this.btnStartPoll.UseVisualStyleBackColor = true;
+            this.btnStartPoll.Click += new System.EventHandler(this.btnStartPoll_Click);
+            // 
+            // btnStopPoll
+            // 
+            this.btnStopPoll.Location = new System.Drawing.Point(582, 103);
+            this.btnStopPoll.Name = "btnStopPoll";
+            this.btnStopPoll.Size = new System.Drawing.Size(106, 41);
+            this.btnStopPoll.TabIndex = 4;
+            this.btnStopPoll.Text = "停止采集";
+            this.btnStopPoll.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnStopPoll);
+            this.Controls.Add(this.btnStartPoll);
             this.Controls.Add(this.dgvDevices);
             this.Controls.Add(this.btnLoadDevices);
             this.Controls.Add(this.btnAddDevice);
@@ -84,6 +107,8 @@ namespace Winform
         private System.Windows.Forms.Button btnAddDevice;
         private System.Windows.Forms.Button btnLoadDevices;
         private System.Windows.Forms.DataGridView dgvDevices;
+        private System.Windows.Forms.Button btnStartPoll;
+        private System.Windows.Forms.Button btnStopPoll;
     }
 }
 

@@ -9,11 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hmi.Core.Entities;
 using Hmi.Infrastructure.Data;
+using System.Threading;
 
 namespace Winform
 {
     public partial class Form1 : Form
     {
+        private readonly Random _rng=new Random();
+        private CancellationTokenSource _pollCts;
+        private Task _pollTask;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -50,15 +56,20 @@ namespace Winform
 
         private void BtnLoadDevices_Click(object sender, EventArgs e)
         {
-            using (var db = new HmiDbContext())
+            using (var db= new HmiDbContext())
             {
-                // 查询 Devices 并一次性加载到内存，再绑定到 DataGridView
-                var list = db.Devices
-                    .OrderBy(d => d.Id)
-                    .ToList();
+                var list = db.Devices.ToList()
+                         .OrderBy(d => d.Id)
+                         .ToList();
 
-                dgvDevices.DataSource = list;
+                dgvDevices.DataSource=list;
+
             }
+        }
+
+        private void btnStartPoll_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

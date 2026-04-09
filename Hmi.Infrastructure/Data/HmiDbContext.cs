@@ -36,20 +36,7 @@ namespace Hmi.Infrastructure.Data
 
 
 
-
-
-
-
-
-
-
-
         }
-
-
-
-
-
 
 
     }
